@@ -1,14 +1,24 @@
-import mongoose, { InferSchemaType, model } from "mongoose";
-import { guildSchema } from "./schemas/guild.js";
-import { memberSchema } from "./schemas/member.js";
 import { logger } from "#base";
 import { env } from "#env";
 import chalk from "chalk";
+import { Client } from "discord.js";
+import mongoose, { InferSchemaType, model } from "mongoose";
+import { guildSchema } from "./schemas/guild.js";
+import { memberSchema } from "./schemas/member.js";
+
+const client = new Client({
+   intents: [
+   "GuildMembers",
+   "MessageContent",
+   "Guilds",
+   "GuildMembers",
+   ]
+});
 
 try {
    logger.log(chalk.blue("Connecting to MongoDB..."));
-   await mongoose.connect(env.MONGO_URI, { 
-      dbName: env.DATABASE_NAME || "database" 
+   await mongoose.connect(env.MONGO_URI, {
+      dbName: env.DATABASE_NAME || "database"
    });
    logger.success(chalk.green("MongoDB connected"));
 } catch(err){
