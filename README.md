@@ -1,6 +1,6 @@
 # Collab Stars! — StarBot ⭐
 
-[![Languages](https://skillicons.dev/icons?i=js,ts,nodejs,mongodb,bash)](https://skillicons.dev)
+[![Languages](https://skillicons.dev/icons?i=js,ts,nodejs,mongodb,bash,nextjs,prisma)](https://skillicons.dev)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js Version](https://img.shields.io/badge/node.js-20.12%2B-brightgreen)](https://nodejs.org/en)
