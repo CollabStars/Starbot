@@ -9,14 +9,14 @@ createCommand({
 	async run(interaction){
 		const row = createRow(
 			// ../../responders/buttons/remind.ts
-			new ButtonBuilder({ 
+			new ButtonBuilder({
 				customId: `remind/${new Date().toISOString()}`,
 				label: "Ping",
 				style: ButtonStyle.Success,
 			})
 		);
 		await interaction.reply({
-			flags: ["Ephemeral"], 
+			flags: ["Ephemeral"],
 			content: `Pong 🏓`,
 			components: [row],
 		});
